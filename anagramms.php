@@ -26,6 +26,7 @@ function isAnagramm($num1, $num2)
 }
 
 $multipliers = array(2, 3, 4, 5, 6);
+$multipliersCount = count($multipliers);
 
 // Основной алгоритм
 // Перебираем натуральный ряд от 1 до 2147483647 (для 32-разрядной версии) и последовательно умножаем текущее число
@@ -42,7 +43,7 @@ for ($num = 1; $num <= PHP_INT_MAX; $num++)  {
         if (isAnagramm($num, $numAfterMultiplication)) {
             $anagramms[] = $numAfterMultiplication;
 
-            if (count($anagramms) == count($multipliers)) {
+            if (count($anagramms) == $multipliersCount) {
                 // текущее число является корректной анаграммой для всех множителей, значит, - это то, что мы искали
                 echo $num, PHP_EOL;
 
