@@ -56,7 +56,6 @@ for ($num = 1; $num <= PHP_INT_MAX; $num++)  {
                     }
                 }
 
-                // конец
                 die();
             }
         } else {
